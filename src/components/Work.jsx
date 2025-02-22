@@ -14,12 +14,11 @@ function Work() {
     return (
         <div className='w-full'>
             <div className=" relative max-w-screen-xl mx-auto text-center ">
-                <h1 className=' text-[38vw] font-medium leading-none select-none tracking-tight '>work</h1>
+                <h1 className='mt-10 text-[38vw] font-medium leading-none select-none tracking-tight '>work</h1>
                 <div className=" absolute top-0 w-full h-full">
                     {images.map((elem, index) => (
-                        elem.isActive && <img className='w-60 rounded-lg absolute -translate-x-[50%] -translate-y-[50%]' src={elem.url} style={{ top: elem.top, left: elem.left }} alt="" />
+                        elem.isActive && <img key={index} className='w-60 rounded-lg absolute -translate-x-[50%] -translate-y-[50%]' src={elem.url} style={{ top: elem.top, left: elem.left }} alt="" />
                     )
-
                     )}
                 </div>
             </div>
