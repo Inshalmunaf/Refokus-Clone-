@@ -11,7 +11,7 @@ var product = [
 ]
 
   return (
-    <div>
+    <div className='mt-32'>
         {product.map((elem,index)=>{
             return <Product key = {index} product = {elem}/>
         })}
