@@ -3,7 +3,7 @@ import Button from './Button'
 
 function Product({ product }) {
     return (
-        <div className="w-full pt-20 text-white">
+        <div className="w-full pt-20 h-[23rem] text-white">
 
             <div className='relative max-w-screen-xl mx-auto flex items-center justify-between'>
                 <h1 className='text-5xl capitalize font-semibold'>{product.title}</h1>
