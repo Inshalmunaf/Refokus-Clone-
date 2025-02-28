@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <div>
-            <div className="w-full">
+            <div className="w-full ">
                 <div className="max-w-screen-xl mx-auto flex gap-30">
                     <div className="basis-1/2">
                         <h1 className='text-[11rem] font-semibold leading-none tracking-tight'>refokus.</h1>
