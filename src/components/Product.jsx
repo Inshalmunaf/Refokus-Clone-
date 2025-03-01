@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from './Button'
 
-function Product({ product }) {
+function Product({ product ,mover,count }) {
     return (
-        <div className="w-full pt-20 h-[23rem] text-white">
+        <div onMouseEnter={()=>mover(count)}  className="w-full pt-20 h-[23rem] text-white">
 
             <div className='relative max-w-screen-xl mx-auto flex items-center justify-between'>
                 <h1 className='text-5xl capitalize font-semibold'>{product.title}</h1>
@@ -15,7 +15,7 @@ function Product({ product }) {
                     </div>
                 </div>
 
-            </div>
+            </div> 
 
         </div>
     )
