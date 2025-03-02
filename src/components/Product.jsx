@@ -1,21 +1,23 @@
 import React from 'react'
 import Button from './Button'
 
-function Product({ product ,mover,count }) {
+function Product({ product, mover, count }) {
     return (
-        <div onMouseEnter={()=>mover(count)}  className="w-full pt-20 h-[23rem] text-white">
+        <div onMouseEnter={() => mover(count)} className={` relative w-full pt-20 h-[23rem] text-white `}>
+            <div className= {`absolute top-0 translate-y-[14%] w-full h-[18rem] flex items-center ${product.color ? product.colour : ''}`}>
 
-            <div className='relative max-w-screen-xl mx-auto flex items-center justify-between'>
-                <h1 className='text-5xl capitalize font-semibold'>{product.title}</h1>
-                <div className=" w-1/3">
-                    <p className='mb-5'>{product.description}</p>
-                    <div className="flex gap-5">
-                        {product.live && <Button buttonTitle='Live Website' />}
-                        {product.case && <Button buttonTitle='Case Study' />}
+                <div className='relative max-w-screen-xlmx-auto flex items-center justify-between'>
+                    <h1 className='text-5xl capitalize font-semibold'>{product.title}</h1>
+                    <div className=" w-1/3">
+                        <p className='mb-5'>{product.description}</p>
+                        <div className="flex gap-5">
+                            {product.live && <Button buttonTitle='Live Website' />}
+                            {product.case && <Button buttonTitle='Case Study' />}
+                        </div>
                     </div>
-                </div>
 
-            </div> 
+                </div>
+            </div>
 
         </div>
     )
