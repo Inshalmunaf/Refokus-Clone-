@@ -32,9 +32,9 @@ function Marquees() {
   ]
 
   return (
-    <div className='py-20 mt-20'>
+    <div className='  py-20 mt-20 w-full overflow-hidden relative'>
       
-      {images.map((item , index)=> <Marquee key = {index} url = {item}/>)}
+      {images.map((item , index)=> <Marquee key = {index} direction={index} url = {item}/>)}
     </div>
     
   )
