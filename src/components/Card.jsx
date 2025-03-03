@@ -1,9 +1,11 @@
+import { motion } from 'motion/react';
 import React from 'react'
 import { IoArrowForwardOutline } from "react-icons/io5";
 
-function Card({ width, start, para, hover }) {
+function Card({ width, start, para, hover = "false"}) {
+  
     return (
-        <div className={`bg-zinc-800 p-5 rounded-xl ${width} min-h-[30rem] flex  flex-col justify-between hover:${hover}`}>
+        <motion.div whileHover={{backgroundColor : hover==="true"&& "#7443ff" , padding : "25px"}} className={`bg-zinc-800 p-5 rounded-xl ${width} min-h-[30rem] flex  flex-col justify-between`}>
             <div className="w-full">
                 <div className="w-full flex justify-between items-center">
                     <h3 className='text-xl'>Heading</h3>
@@ -22,7 +24,7 @@ function Card({ width, start, para, hover }) {
 
                 {para && <p className='text-sm font-medium text-zinc-500 '>Lorem ipsum dolor sit amet consectetur.</p>}
             </div>
-        </div>
+        </motion.div>
     )
 }
 
